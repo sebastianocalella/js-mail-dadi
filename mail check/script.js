@@ -1,8 +1,7 @@
 const buttonElement = document.getElementById('check');
-const mailElement = document.getElementById('usermail');
 const mailList = 
 [
-'pincopallo-1@gmail.com',
+    'pincopallo-1@gmail.com',
 'pincopallo-2@gmail.com',
 'pincopallo-3@gmail.com',
 'pincopallo-4@gmail.com',
@@ -30,12 +29,19 @@ console.log(mailList);
 console.log(usermail.value);
 console.log(mailList.length);
 
+let answerElement = document.getElementById('answer');
+let answer = answerElement.value = 'Siamo spiacenti ma la mail inserita non risulta presente nella nostra mail list';
+
 buttonElement.addEventListener('click',function(){
+    const mailElement = document.getElementById('usermail');
     for (let i=0; i<mailList.length; i++){
         if (mailElement.value == mailList[i]){
             console.log('yes');
-        }else {
+            answer = `ciao ${mailList[i]} ti confermiamo la tua presenza all'interno della nostra mail list`;
+        } else {
             console.log('nope');
         }
     }
+    console.log(answer);
 })
+
