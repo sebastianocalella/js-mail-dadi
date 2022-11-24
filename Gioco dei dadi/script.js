@@ -1,7 +1,11 @@
 
-const option = [1,2,3,4,5,6];
+const option = [];
 const playButton = document.getElementById('play');
 const answer = document.getElementById('answer');
+
+for (let i=1; i<=6; i++){
+    option.push(i);
+}
 
 playButton.addEventListener('click', function(){
     let userNumber = option[Math.floor(Math.random()*option.length)];
