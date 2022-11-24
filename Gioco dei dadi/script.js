@@ -14,12 +14,13 @@ playButton.addEventListener('click', function(){
     let pcNumber = option[Math.floor(Math.random()*option.length)];
     console.log(pcNumber);
     if (userNumber > pcNumber) {
-        answer.innerHTML='<p> dannazione hai vinto!</p>';
+        answer.value ='<p> dannazione hai vinto!</p>';
     } else if (userNumber < pcNumber){
-        answer.innerHTML='<p> Ahah! ho vinto io!</p>';
+        answer.value ='<p> Ahah! ho vinto io!</p>';
     } else {
-        answer.innerHTML='<p> Uno stallo alla messicana, vale la pena giocare di nuovo!</p>';
+        answer.value ='<p> Uno stallo alla messicana, vale la pena giocare di nuovo!</p>';
     }
+    answer.innerHTML = `<p> il tuo numero è: ${userNumber}</p> <p>il mio numero è: ${pcNumber}</p> <p>${answer.value}`
 })
 
 
