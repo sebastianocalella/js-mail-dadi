@@ -28,3 +28,14 @@ const mailList =
 
 console.log(mailList);
 console.log(usermail.value);
+console.log(mailList.length);
+
+buttonElement.addEventListener('click',function(){
+    for (let i=0; i<mailList.length; i++){
+        if (mailElement.value == mailList[i]){
+            console.log('yes');
+        }else {
+            console.log('nope');
+        }
+    }
+})
