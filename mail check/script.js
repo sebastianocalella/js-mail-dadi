@@ -26,8 +26,6 @@ const mailList =
 ];
 
 console.log(mailList);
-console.log(usermail.value);
-console.log(mailList.length);
 
 let answerElement = document.getElementById('answer');
 let answer = answerElement.value = 'Siamo spiacenti ma la mail inserita non risulta presente nella nostra mail list';
@@ -36,12 +34,11 @@ buttonElement.addEventListener('click',function(){
     const mailElement = document.getElementById('usermail');
     for (let i=0; i<mailList.length; i++){
         if (mailElement.value == mailList[i]){
-            console.log('yes');
-            answer = `ciao ${mailList[i]} ti confermiamo la tua presenza all'interno della nostra mail list`;
-        } else {
-            console.log('nope');
-        }
+            answer = `ciao ${mailList[i]} ti confermiamo la tua presenza all'interno della nostra mail list!`;
+        } else {}
     }
-    console.log(answer);
+    answerElement.innerHTML = answer;
+
+    answer = 'Siamo spiacenti ma la mail inserita non risulta presente nella nostra mail list';
 })
 
